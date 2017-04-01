@@ -1,0 +1,19 @@
+{
+  "name": "Xim",
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "makeup",
+    "markup"
+  ],
+  "homepage": "https://github.com/dmytrous/xim",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

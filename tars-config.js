@@ -39,12 +39,12 @@ module.exports = {
 
     css: {
         // concat, manual
-        workflow: 'concat'
+        workflow: 'manual'
     },
 
     js: {
         // concat, modular
-        workflow: 'concat',
+        workflow: 'modular',
 
         // Only webpack is available right now
         bundler: 'webpack',
@@ -53,7 +53,7 @@ module.exports = {
          * Use linting of js-files
          * @type {Boolean}
          */
-        lint: true,
+        lint: false,
 
         /**
          * Use babel for ES6(ES7-ESNext) syntax support
@@ -65,7 +65,7 @@ module.exports = {
          * Remove console.log and debugger from js code in release mode
          * @type {Boolean}
          */
-        removeConsoleLog: true,
+        removeConsoleLog: false,
 
         // Special config for webpack
         webpack: {
@@ -135,7 +135,7 @@ module.exports = {
          * Do you need to use notify?
          * @type {Boolean}
          */
-        useNotify: true,
+        useNotify: false,
 
         /**
          * Title for notifier
@@ -198,13 +198,13 @@ module.exports = {
      * Build version is a date ot building
      * @type {Boolean}
      */
-    useBuildVersioning: true,
+    useBuildVersioning: false,
 
     /**
      * Use archiver for your build
      * @type {Boolean}
      */
-    useArchiver: true,
+    useArchiver: false,
 
     /**
      * Set ulimit. Topical for Linux-family OS and OSX.
@@ -271,7 +271,7 @@ module.exports = {
          * 'static' by default
          * @type {String}
          */
-        staticFolderName: 'static',
+        staticFolderName: 'assets',
 
         /**
          * Name of folder with images
