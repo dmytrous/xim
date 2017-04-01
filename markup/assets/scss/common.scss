@@ -1,0 +1,19 @@
+// Common styles of the project
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
+.main{
+    &-layout {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        min-height: 100%;
+    }
+    &-content {
+        display: flex;
+        flex-grow: 1;
+    }
+}

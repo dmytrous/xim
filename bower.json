@@ -15,5 +15,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "malihu-custom-scrollbar-plugin": "^3.1.5"
+  }
 }

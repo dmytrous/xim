@@ -10,8 +10,8 @@
             "baseDir": "./dev"
         },
         "port": 3004,
-        "open": true,
-        "notify": true,
+        "open": false,
+        "notify": false,
 
         // Choose browser to open
         // @type {String|Array}
@@ -27,7 +27,8 @@
             "./",
             "./markup/",
             "./node_modules/",
-            "./bower_components/"
+            "./bower_components/",
+            "./bower_components/bootstrap-sass/assets/stylesheets/"
         ]
     },
 

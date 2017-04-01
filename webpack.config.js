@@ -144,7 +144,11 @@ module.exports = {
             modules: path.resolve(`./markup/${tars.config.fs.componentsFolderName}`),
             components: path.resolve(`./markup/${tars.config.fs.componentsFolderName}`),
             static: path.resolve(`./markup/${staticFolderName}`)
-        }
+        },
+      root: [
+            path.resolve('node_modules'),
+            path.resolve('bower_components'),
+      ]
     },
 
     eslint: {

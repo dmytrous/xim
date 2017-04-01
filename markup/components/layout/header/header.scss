@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-items: center;
+  height: 60px;
+  padding: 0 30px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .07);
+  &__logo {
+    width: 130px;
+    height: 32px;
+    background: url(%=static=%general/logo.png) center no-repeat;
+  }
+  &__controls {
+
+  }
+}

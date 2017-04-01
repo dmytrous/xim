@@ -1,0 +1,18 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+.btn {
+  &-orange {
+    padding: 8px 27px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    background: #f3781e;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      outline: 0;
+    }
+  }
+}
