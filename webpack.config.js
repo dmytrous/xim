@@ -11,7 +11,7 @@ const sourceMapsDest = tars.config.sourcemaps.js.inline ? 'inline-' : '';
 const sourceMapsType = `#${sourceMapsDest}source-map`;
 
 let outputFileNameTemplate = '[name]';
-let modulesDirectories = ['node_modules'];
+let modulesDirectories = ['node_modules', 'bower_components'];
 let preLoaders = [
     {
         test: /\.js$/,
@@ -147,11 +147,13 @@ module.exports = {
         },
       root: [
             path.resolve('node_modules'),
-            path.resolve('bower_components'),
+            path.resolve('bower_components')
       ]
     },
-
     eslint: {
         configFile: `${cwd}/.eslintrc`
-    }
+    },
+  externals: {
+        jquery: '$'
+  }
 };

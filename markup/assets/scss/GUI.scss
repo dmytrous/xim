@@ -1,6 +1,11 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
 .btn {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0 !important;
+  }
   &-orange {
     padding: 8px 27px;
     border-radius: 50px;
@@ -12,7 +17,6 @@
     &:focus,
     &:active {
       color: #fff;
-      outline: 0;
     }
   }
 }

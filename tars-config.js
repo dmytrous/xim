@@ -23,7 +23,9 @@ module.exports = {
      *     }
      * ]
      */
-    postcss: [],
+    postcss: [{
+        name: 'postcss-flexibility'
+    }],
 
     svg: {
         active: true,

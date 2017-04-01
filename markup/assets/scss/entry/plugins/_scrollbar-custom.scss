@@ -1,0 +1,17 @@
+.mCS-custom {
+  .mCSB_dragger {
+    max-height: 200px !important;
+  }
+  .mCSB_dragger .mCSB_dragger_bar {
+    width: 8px;
+    max-height: 200px !important;
+    background: #e4e6e8 !important;
+  }
+  .mCSB_draggerRail {
+    background: transparent;
+  }
+}
+
+.mCSB_outside + .mCSB_scrollTools.mCS-custom {
+  right: -24px;
+}

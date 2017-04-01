@@ -1,8 +1,7 @@
 @import 'partials/_bootstrap';
 @import '../common';
 @import '../GUI';
+@import 'partials/_plugins';
 
 @import "components/layout/header/header";
-@import "components/search/filter/filter";
-@import "components/search/map/map";
-@import "components/search/result/result";
+@import "components/search/search";
