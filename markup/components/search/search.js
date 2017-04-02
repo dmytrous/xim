@@ -8,5 +8,5 @@ $(document).ready(() => {
     scrollInertia: 200,
     scrollbarPosition: "outside",
     theme: 'custom'
-  })
+  });
 });
