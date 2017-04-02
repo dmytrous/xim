@@ -1,16 +1,32 @@
 .search-result {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  &__header {}
-  &__tab-wrap {}
+  &__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 0 0 auto;
+    transform: translate3d(0, 0, 0)
+  }
+  &__body {
+    display: flex;
+    flex-basis: 100%;
+    height: 100%;
+    //min-height: 100%;
+    overflow-y: hidden;
+    //flex: 1 1 auto;
+    //overflow-y: hidden;
+  }
+  &__tab-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
   &__tab {
     display: flex;
     flex-direction: row;
-
     margin: 0;
     padding: 0;
     list-style: none;
+    width: 100%;
     &-item {
       display: flex;
       align-items: center;
@@ -52,15 +68,12 @@
     font-size: 13px;
     font-weight: 600;
   }
-  &__body {
-    display: flex;
-    flex: 1 1 auto;
-  }
+
   &__tab-body {
-    padding: 30px 30px 10px;
+    padding: 0 0 10px;
     display: none;
     &.active {
-      display: flex;
+      display: block;
     }
   }
 }

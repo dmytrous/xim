@@ -1,7 +1,11 @@
 @import 'partials/_bootstrap';
 @import '../common';
 @import '../GUI';
-@import 'partials/_plugins';
+//@import 'partials/_plugins';
 
 @import "components/layout/header/header";
 @import "components/search/search";
+
+//Plugins
+@import 'perfect-scrollbar/src/css/main';
+@import '../plugins/_scrollbar-custom' ;
