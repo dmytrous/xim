@@ -5,7 +5,6 @@
   overflow: hidden;
   padding: 0 25px;
 }
-
 .ps-theme-custom {
   .ps-scrollbar-y-rail {
     position: absolute;
@@ -15,20 +14,4 @@
     width: 8px;
     background: #e4e6e8
   }
-}
-
-.mCS-custom {
-  .mCSB_dragger {
-    min-height: 200px !important;
-  }
-  .mCSB_dragger .mCSB_dragger_bar {
-    min-height: 200px !important;
-  }
-  .mCSB_draggerRail {
-    background: transparent;
-  }
-}
-
-.mCSB_outside + .mCSB_scrollTools.mCS-custom {
-  right: -24px;
 }
