@@ -69,6 +69,7 @@
     display: none;
     &.active {
       display: block;
+      width: 100%;
     }
   }
 }

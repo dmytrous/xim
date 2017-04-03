@@ -154,6 +154,7 @@ module.exports = {
         configFile: `${cwd}/.eslintrc`
     },
   externals: {
-        jquery: '$'
+        jquery: '$',
+        google: 'google'
   }
 };
