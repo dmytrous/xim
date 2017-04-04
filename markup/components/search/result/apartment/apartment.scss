@@ -1,0 +1,59 @@
+$border-radius: 5px;
+.apartment-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+.apartment {
+  position: relative;
+  display: flex;
+  max-width: 435px;
+  min-height: 327px;
+  flex: 0 0 49%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: $border-radius;
+  margin-top: 30px;
+  overflow: hidden;
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 190px;
+    background: url(%=static=%assets/search/result/nonstandart-shadow.png) center bottom no-repeat;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+  }
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex: 0 0 auto;
+    padding: 0 15px 10px;
+    color: #fff;
+  }
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__price {
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 1em;
+  }
+  &__currency {
+    padding-right: 3px;
+    font-size: 14px;
+  }
+}
