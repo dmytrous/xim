@@ -1,36 +1,44 @@
-let loadJSON = require('static/js/helpers/helpers').loadJSON;
+import loadGoogleMapsAPI from 'load-google-maps-api';
 
 $(document).ready(() => {
-  let map;
-  let mapStyle;
   let dataApartments;
+  let loadOptions = {
+    key: 'AIzaSyDSUvoY93HWvuy8CT7Cr97NUj7VM7I3Hms',
+    language: 'en'
+  };
+  let mapOptions = {
+    center: {lat: 41.393592, lng: 2.162570},
+    zoom: 8
+  };
 
-  var styledMap = new google.maps.StyledMapType(mapStyle,
-      {name: "Styled Map"});
+  /**Google maps load then init
+   * @param options {object}
+   * */
+  loadGoogleMapsAPI(loadOptions).then((googleMaps) => {
 
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('gmap'), {
-      center: {lat: 41.393592, lng: 2.162570},
-      zoom: 8,
-      mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-      }
+    /**Load apartmenrs data json
+     * @param url {string}
+     * */
+    $.getJSON('/data/apartments.json', (data) => {
+      dataApartments = data;
+
+      /**Load map styles data json
+       * @param url {string}
+       * */
+      $.getJSON('/data/map.json', (data) => {
+        maOptions.styles = data;
+      });
+
+      /**Initialize map
+       * @param el {object} en HTMLElement where map will appear
+       * @param options {object} google maps standart options
+       * */
+
+      map = new googleMaps.Map(document.getElementById('gmap'), mapOptions);
+
+    }).catch((err) => {
+      console.error(err);
     });
-    map.mapTypes.set('map_style', styledMap);
-    map.setMapTypeId('map_style');
-  }
-
-  $.getJSON('/data/apartments.json', (data) => {
-    dataApartments = data;
-
-    $.getJSON('/data/map.json', (data) => {
-      mapStyle = data;
-      console.log(mapStyle)
-    });
-
-    // window.initMap = initMap;
-    initMap();
   });
-
 
 });

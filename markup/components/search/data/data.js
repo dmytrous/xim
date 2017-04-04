@@ -37,7 +37,7 @@ const data = {
   },
   results:[
     {
-      "id": "1",
+      "id": 1,
       "name": "Stylish apartment in el born",
       "price": "85",
       "currency": "‌€",
