@@ -9,7 +9,7 @@ $(document).ready(() => {
   };
   let mapOptions = {
     center: {lat: 41.393592, lng: 2.162570},
-    zoom: 8
+    zoom: 8,
   };
 
   /**Google maps load then init
@@ -34,10 +34,14 @@ $(document).ready(() => {
          * @param options {object} google maps standart options
          * */
 
-        map = new googleMaps.Map(document.getElementById('gmap'), mapOptions);
+        let map = new googleMaps.Map(document.getElementById('gmap'), mapOptions);
+
+
+        let bounds = new googleMaps.LatLngBounds(
+            new googleMaps.LatLng(62.281819, -150.287132),
+            new googleMaps.LatLng(62.400471, -150.005608));
+
       });
-
-
     }).catch((err) => {
       console.error(err);
     });
