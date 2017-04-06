@@ -17,34 +17,51 @@ $(document).ready(() => {
    * */
   loadGoogleMapsAPI(loadOptions).then((googleMaps) => {
 
+    /**Load map styles data json
+     * @param url {string}
+     * */
+    $.getJSON('/data/map.json', (data) => {
+      mapOptions.styles = data;
+
+      /**Initialize map
+       * @param el {object} en HTMLElement where map will appear
+       * @param options {object} google maps standart options
+       * */
+      map = new googleMaps.Map(document.getElementById('gmap'), mapOptions);
+
+      setMarkers(map, googleMaps);
+
+    }).catch((err) => {
+      console.error(err);
+    });
+  });
+
+  /**Set google maps markers
+   * @param map {object} Google Map Object
+   * */
+  function setMarkers (map, mapObj) {
+    console.log(map);
     /**Load apartmenrs data json
      * @param url {string}
      * */
     $.getJSON('/data/apartments.json', (data) => {
       dataApartments = data;
+      console.log(dataApartments);
 
-      /**Load map styles data json
-       * @param url {string}
-       * */
-      $.getJSON('/data/map.json', (data) => {
-        mapOptions.styles = data;
+      for (let i = 0; i < dataApartments.length; i++) {
+        let apartment = dataApartments[i];
+        console.log(apartment.name, apartment.lat, apartment.lng);
+        let marker = new mapObj.Marker({
+          position: {lat: apartment.lat, lng: apartment.lng},
+          map: map,
+        });
+      }
 
-        /**Initialize map
-         * @param el {object} en HTMLElement where map will appear
-         * @param options {object} google maps standart options
-         * */
-
-        let map = new googleMaps.Map(document.getElementById('gmap'), mapOptions);
-
-
-        let bounds = new googleMaps.LatLngBounds(
-            new googleMaps.LatLng(62.281819, -150.287132),
-            new googleMaps.LatLng(62.400471, -150.005608));
-
-      });
     }).catch((err) => {
       console.error(err);
     });
-  });
+  }
+
+
 
 });

@@ -5,13 +5,17 @@
   overflow: hidden;
   padding: 0 25px;
 }
-.ps-theme-custom {
+
+.ps-container.ps-theme-custom {
   .ps-scrollbar-y-rail {
     position: absolute;
     right: 6px !important;
   }
   .ps-scrollbar-y {
-    width: 8px;
-    background: #e4e6e8
+    width: 9px;
+    background: #e4e6e8;
+  }
+  .ps-scrollbar-y-rail {
+    border-radius: 6px;
   }
 }
