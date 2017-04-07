@@ -56,4 +56,15 @@ $filter-search-height: 36px;
       transition: all 400ms ease;
     }
   }
+
+  &__chkbx {
+    width: 32%;
+    max-width: 220px;
+    margin-right: 0;
+    &-group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
 }

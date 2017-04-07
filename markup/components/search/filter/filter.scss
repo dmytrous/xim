@@ -9,8 +9,9 @@
     flex-direction: column;
   }
   &__label {
-    padding-right: 10px;
-    width: 165px;
+    padding-right: 20px;
+    //width: 165px;
+    width: 18%;
     flex: 0 0 auto;
     @media(max-width: 479px) {
       width: 100%;
@@ -105,7 +106,7 @@
     }
   }
   &__txt {
-    padding-left: 10px;
+    margin-left: 10px;
     border-bottom: 1px dotted transparent;
   }
   &__txt:hover {

@@ -20,15 +20,14 @@
     color: #67808d;
     font-weight: 600;
   }
-  &__chkbx {
-    display: flex;
-    width: 32%;
+  &-chkbx {
+    display: inline-block;
+    margin-right: 15px;
     margin-bottom: 5px;
     &-label {
       position: relative;
       max-width: 220px;
       height: 30px;
-      text-overflow: ellipsis;
       padding-left: 35px;
       font-size: 13px;
       font-weight: normal;
@@ -47,7 +46,7 @@
     }
     &-input {
       display: none;
-      &:checked + .form__chkbx-label {
+      &:checked + .form-chkbx-label {
         &:before {
           border-color: #57778e;
           background: url('%=static=%general/form/checked.png') center no-repeat  #57778e;

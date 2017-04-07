@@ -5,7 +5,17 @@ declare const $: JQueryStatic;
 
 $(document).ready(() => {
 
-  $('.js-scroll').perfectScrollbar({
-    theme: 'custom'
-  });
+  /** Enable nested scrolling only on large devices
+   * */
+  if ($(window).width() > 1024) {
+    $('.js-scroll').perfectScrollbar({
+      theme: 'custom'
+    });
+  }
+
+  /** Collapse all bootstrap entities on tablet and mobile
+   * */
+  if ($(window).width() <= 1024) {
+    // $('.collapse').collapse('hide');
+  }
 });
