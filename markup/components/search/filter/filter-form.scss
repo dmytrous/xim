@@ -1,0 +1,59 @@
+$filter-search-height: 36px;
+
+.filter-form {
+  display: block;
+  font-size: 13px;
+  &__input-search {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: $filter-search-height;
+    padding-left: 45px;
+    display: block;
+    border: 0;
+    box-shadow: none;
+    font-size: 13px;
+    color: #86888a;
+    background: url('%=static=%assets/search/filter/glass.png') 14px center no-repeat;
+    &:focus {
+      border-color: transparent;
+      box-shadow: none
+    }
+  }
+  &__search-wrap {
+    position: relative;
+    border: 1px solid #e1e6e8;
+    box-shadow: 1px 1px 21px 4px rgba(0, 0, 0, .07);
+    border-radius: 3px;
+    &._focused {
+      border-color: rgba(87, 119, 142, .5);
+      box-shadow: 1px 1px 21px 4px rgba(87, 119, 142, .15)
+    }
+  }
+  &__search-tags {
+    position: relative;
+    margin-top: -32px;
+    margin-left: 45px;
+    z-index: 2;
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+
+  }
+  &__collapse,
+  &.collapse {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 80px;
+    max-height: 80px;
+    overflow: hidden;
+    transition: all 400ms ease;
+    &.collapsing,
+    &.in {
+      display: flex;
+      max-height: 100%;
+      transition: all 400ms ease;
+    }
+  }
+}

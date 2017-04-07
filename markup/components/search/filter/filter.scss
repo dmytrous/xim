@@ -17,12 +17,10 @@
     }
   }
   &__content {
+    padding-top: 6px;
     padding-left: 10px;
-    //display: flex;
     width: 100%;
-    //flex-grow: 0;
   }
-
   &__label-btn {
     position: relative;
     padding-left: 30px;
@@ -66,27 +64,29 @@
 }
 
 .btn-collapse {
-    position: relative;
-    padding-left: 30px;
-    border: 0;
-    background: transparent;
-    font-size: 13px;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 0;
+  height: 30px;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: #67808d;
+  &:hover,
+  &:focus,
+  &:active {
     color: #67808d;
-    &:hover,
-    &:focus,
-    &:active {
-      color: #67808d;
-      box-shadow: none;
-    }
+    box-shadow: none;
+  }
   &__icon {
-    position: absolute;
+    position: relative;
     width: 18px;
     height: 18px;
     background: #57778e;
     border-radius: 25px;
-    left: 0;
-    top: 5px;
     &:before,
     &:after {
       position: absolute;
@@ -105,6 +105,7 @@
     }
   }
   &__txt {
+    padding-left: 10px;
     border-bottom: 1px dotted transparent;
   }
   &__txt:hover {
@@ -113,4 +114,57 @@
   }
 }
 
-@import 'form';
+.filter-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto;
+  width: auto;
+  padding: 6px 8px 6px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  line-height: 1em;
+  border: 1px solid #e1e6e8;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 1px 1px 21px 4px rgba(0, 0, 0, .07);
+
+  &__close {
+    position: relative;
+    display: inline-block;
+    margin-left: 7px;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 2px;
+      background: #57778e;
+      transform-origin: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+    &,
+    &:focus,
+    &:active,
+    &:hover {
+      background: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+@import 'filter-form';

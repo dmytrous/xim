@@ -1,4 +1,4 @@
-$border-radius: 5px;
+$border-radius: 10px;
 .apartment-wrap {
   display: flex;
   flex-direction: row;
@@ -40,7 +40,7 @@ $border-radius: 5px;
     align-content: flex-end;
     align-items: flex-end;
     flex: 0 0 auto;
-    padding: 0 15px 10px;
+    padding: 0 15px 12px;
     color: #fff;
   }
   &__name {

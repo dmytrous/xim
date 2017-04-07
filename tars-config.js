@@ -61,7 +61,13 @@ module.exports = {
          * Use babel for ES6(ES7-ESNext) syntax support
          * @type {Boolean}
          */
-        useBabel: true,
+        useBabel: false,
+
+      /**
+       * Use TypeScript for ES6(ES7-ESNext) syntax support
+       * @type {Boolean}
+       */
+        useTypeScript: true,
 
         /**
          * Remove console.log and debugger from js code in release mode

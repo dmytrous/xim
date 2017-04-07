@@ -82,6 +82,15 @@ if (tars.config.js.useBabel) {
     );
 }
 
+if (tars.config.js.useTypeScript) {
+  loaders.push(
+      {
+        test: /\.ts$/,
+        loader: 'awesome-typescript-loader'
+      }
+  );
+}
+
 /**
  * Add to each entry point entries for webpack dev-server and webpack-hot-middleware
  * @param  {Object} entryConfig
@@ -115,7 +124,7 @@ function prepareEntryPoints(entryConfig) {
 module.exports = {
     // We have to add some pathes to entry point in case of using HMR
     entry: prepareEntryPoints({
-        main: path.resolve(`${cwd}/markup/${staticFolderName}/js/main.js`)
+        main: path.resolve(`${cwd}/markup/${staticFolderName}/js/main.ts`)
     }),
 
     output: {

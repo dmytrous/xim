@@ -8,41 +8,46 @@
             </button>
         </div>
         <div class="filter__content collapse in" id="amentities">
-            <form action="" class="filter-form">
-                <div class="form-group filter-form__group _search">
-                    <label for="search" class="filter-form__label">Amentities search</label>
-                    <input type="text" class="form-control filter-form__input filter-form__input-search" name="search" id="search" placeholder="enter the names of amenities that you need in apartment">
+            <form action="" class="form filter-form">
+                <div class="form__group _search">
+                    <label for="search" class="form__label">Amentities search</label>
+                    <div class="filter-form__search-wrap">
+                        <input type="text" class="form-control filter-form__input-search" name="search" id="search" placeholder="enter the names of amenities that you need in apartment">
+                        <div class="filter-form__search-tags  js-search-filters">
+                            {{> search/filter/tags }}
+                        </div>
+                    </div>
                 </div>
                 <!--section-->
-                <div class="filter-form__section">
-                    <div class="filter-form__section-header">
+                <div class="form__section">
+                    <div class="form__section-header">
                         <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#popular-filter">
                             <span class="btn-collapse__icon"></span>
                             <span class="btn-collapse__txt">Popular Amentities</span>
                         </button>
                     </div>
 
-                    <div class="filter-form__section-body">
+                    <div class="form__section-body">
                         <div class="filter-form__collapse collapse" id="popular-filter">
                             {{#each this.popular}}
-                            <div class="filter-form__chkbx">
-                                <input type="checkbox" id="popular-chkbx{{@index}}" class="filter-form__chkbx-input">
-                                <label for="popular-chkbx{{@index}}" class="filter-form__chkbx-label">{{this}}</label>
+                            <div class="form__chkbx">
+                                <input type="checkbox" id="popular-chkbx{{@index}}" class="form__chkbx-input">
+                                <label for="popular-chkbx{{@index}}" class="form__chkbx-label">{{this}}</label>
                             </div>
                             {{/each}}
                         </div>
                     </div>
                 </div>
                 <!--section-->
-                <div class="filter-form__section">
-                    <div class="filter-form__section-header">Apartment</div>
+                <div class="form__section">
+                    <div class="form__section-header">Apartment</div>
 
-                    <div class="filter-form__section-body">
+                    <div class="form__section-body">
                         <div class="filter-form__collapse" id="apartment-filter">
                             {{#each this.apartment}}
-                            <div class="filter-form__chkbx">
-                                <input type="checkbox" id="apartment-chkbx{{@index}}" class="filter-form__chkbx-input">
-                                <label for="apartment-chkbx{{@index}}" class="filter-form__chkbx-label">{{this}}</label>
+                            <div class="form__chkbx">
+                                <input type="checkbox" id="apartment-chkbx{{@index}}" class="form__chkbx-input">
+                                <label for="apartment-chkbx{{@index}}" class="form__chkbx-label">{{this}}</label>
                             </div>
                             {{/each}}
                         </div>
@@ -50,20 +55,20 @@
                 </div>
 
                 <!--section-->
-                <div class="filter-form__section">
-                    <div class="filter-form__section-header">
+                <div class="form__section">
+                    <div class="form__section-header">
                         <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#kitchen-filter">
                             <span class="btn-collapse__icon"></span>
-                            <span class="btn-collapse__txt">Popular Amentities</span>
+                            <span class="btn-collapse__txt">Kitchen</span>
                         </button>
                     </div>
 
-                    <div class="filter-form__section-body">
+                    <div class="form__section-body">
                         <div class="filter-form__collapse collapse" id="kitchen-filter">
                             {{#each this.kitchen}}
-                            <div class="filter-form__chkbx">
-                                <input type="checkbox" id="kitchen-chkbx{{@index}}" class="filter-form__chkbx-input">
-                                <label for="kitchen-chkbx{{@index}}" class="filter-form__chkbx-label">{{this}}</label>
+                            <div class="form__chkbx">
+                                <input type="checkbox" id="kitchen-chkbx{{@index}}" class="form__chkbx-input">
+                                <label for="kitchen-chkbx{{@index}}" class="form__chkbx-label">{{this}}</label>
                             </div>
                             {{/each}}
                         </div>

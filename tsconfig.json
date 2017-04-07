@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "allowJs": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es6",
+      "dom"
+    ]
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true
+  },
+  "exclude": [
+    "node_modules",
+    "dev",
+    "./markup/components/**/data.js",
+    "./tars"
+  ],
+  "include": [
+    "markup",
+    "bower_components"
+  ]
+}
