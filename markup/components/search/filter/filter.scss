@@ -5,7 +5,7 @@
 .filter {
   display: flex;
   flex-direction: row;
-  @media(max-width: 479px) {
+  @media(max-width: 1160px) {
     flex-direction: column;
   }
   &__label {

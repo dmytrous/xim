@@ -29,6 +29,9 @@ $border-radius: 10px;
     flex: 1 0 100%;
     align-self: center;
   }
+  @media (max-width: 380px) {
+    min-height: 250px;
+  }
   &__caption {
     display: flex;
     flex-direction: column;

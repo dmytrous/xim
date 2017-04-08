@@ -58,9 +58,22 @@ $filter-search-height: 36px;
   }
 
   &__chkbx {
-    width: 32%;
-    max-width: 220px;
+    position: relative;
     margin-right: 0;
+    padding-right: 5px;
+    flex: 0 0 32%;
+
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      flex-basis: 50%;
+    }
+    @media (max-width: 640px) {
+      flex-basis: 50%;
+    }
+
+    @media (max-width: 380px) {
+      flex-basis: 100%;
+    }
+
     &-group {
       display: flex;
       flex-wrap: wrap;

@@ -64,7 +64,6 @@ declare const $: JQueryStatic;
         console.error(err);
       });
     }
-
-
-
   });
+
+//  TODO: Write class for working with google maps, fix google maps styles
