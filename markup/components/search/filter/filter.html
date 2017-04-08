@@ -45,17 +45,14 @@
                 <!--Filter section-->
                 <div class="form__section">
                     <div class="form__section-header">Apartment</div>
-
                     <div class="form__section-body">
-                        <div class="filter-form__collapse" id="apartment-filter">
-                            <div class="filter-form__chkbx-group">
-                                {{#each this.apartment}}
-                                <div class="form-chkbx filter-form__chkbx">
-                                    <input type="checkbox" id="apartment-chkbx{{@index}}" class="form-chkbx-input">
-                                    <label for="apartment-chkbx{{@index}}" class="form-chkbx-label">{{this}}</label>
-                                </div>
-                                {{/each}}
+                        <div class="filter-form__chkbx-group">
+                            {{#each this.apartment}}
+                            <div class="form-chkbx filter-form__chkbx">
+                                <input type="checkbox" id="apartment-chkbx{{@index}}" class="form-chkbx-input">
+                                <label for="apartment-chkbx{{@index}}" class="form-chkbx-label">{{this}}</label>
                             </div>
+                            {{/each}}
                         </div>
                     </div>
                 </div>
