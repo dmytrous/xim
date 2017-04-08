@@ -3,3 +3,19 @@
   height: 100%;
 
 }
+
+.gmap-marker {
+  display: inline-block;
+  width: 40px;
+  height: 48px;
+  padding-top: 14px;
+  text-align: center;
+  background: url('%=static=%plugins/gmap/marker.png');
+
+  &__price {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1em;
+  }
+}

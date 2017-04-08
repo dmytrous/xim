@@ -124,7 +124,7 @@ function prepareEntryPoints(entryConfig) {
 module.exports = {
     // We have to add some pathes to entry point in case of using HMR
     entry: prepareEntryPoints({
-        main: path.resolve(`${cwd}/markup/${staticFolderName}/js/main.ts`)
+        main: path.resolve(`${cwd}/markup/${staticFolderName}/js/main`)
     }),
 
     output: {
@@ -163,7 +163,6 @@ module.exports = {
         configFile: `${cwd}/.eslintrc`
     },
   externals: {
-        jquery: '$',
-        google: 'google'
+        jquery: '$'
   }
 };

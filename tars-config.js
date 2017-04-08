@@ -23,9 +23,7 @@ module.exports = {
      *     }
      * ]
      */
-    postcss: [{
-        name: 'postcss-flexibility'
-    }],
+    postcss: [],
 
     svg: {
         active: true,
@@ -61,13 +59,13 @@ module.exports = {
          * Use babel for ES6(ES7-ESNext) syntax support
          * @type {Boolean}
          */
-        useBabel: false,
+        useBabel: true,
 
       /**
        * Use TypeScript for ES6(ES7-ESNext) syntax support
        * @type {Boolean}
        */
-        useTypeScript: true,
+        useTypeScript: false,
 
         /**
          * Remove console.log and debugger from js code in release mode
