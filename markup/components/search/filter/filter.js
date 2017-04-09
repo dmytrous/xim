@@ -52,6 +52,7 @@ export default class AmentitiesFilter {
   removeFilter(filter) {
     this.filters.splice(this.filters.indexOf(filter), 1);
     this.removeFilterTag(filter);
+    //Make clear if no filters
     if (!this.filters.length) this.flush();
   }
 

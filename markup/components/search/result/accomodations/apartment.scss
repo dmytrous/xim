@@ -33,16 +33,16 @@ $border-radius: 10px;
     min-height: 250px;
   }
   &._filter-hidden {
-    display: none;
-    //animation: slide 1s 1 ease forwards;
+
+    animation: fadeOutApartment 1s 1 ease forwards;
   }
 
+  &,
   &._filter-visible {
-    display: block;
-    //transition: all 400ms ease;
+    animation: fadeInApartment 1s 1 ease forwards;
   }
 
-  @keyframes slide {
+  @keyframes fadeOutApartment {
     0% {
       opacity: 1;
     }
@@ -50,6 +50,17 @@ $border-radius: 10px;
       position: absolute;
       opacity: 0;
       display: none;
+    }
+  }
+
+  @keyframes fadeInApartment {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      position: relative;
+      opacity: 1;
+      display: flex;
     }
   }
 

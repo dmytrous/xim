@@ -15,7 +15,7 @@ export default class Accomodations {
     //First found elements which match
     for (let key in accommodations) {
       $(`.js-apartment[data-apartment-id="${accommodations[key].id}"]`)
-          .removeClass('_filter-hidden')
+          // .removeClass('_filter-hidden')
           .toggleClass('_filter-visible');
     }
 
@@ -34,3 +34,5 @@ export default class Accomodations {
     });
   }
 }
+
+//TODO: Think about optimization
