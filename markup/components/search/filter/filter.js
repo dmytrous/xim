@@ -65,7 +65,7 @@ export default class AmentitiesFilter {
     this.$filterTags.append($filterTag).fadeIn();
   };
 
-  /**@method Add selected filter tag to tag panel
+  /**@method Remove selected filter tag to tag panel
    * @name removeFilterTag
    * @param filter {string} name of filter criteria
    * */
