@@ -14,8 +14,7 @@ $(document).ready(() => {
     center: { lat: 41.393592, lng: 2.162570 },
     zoom: 8,
   };
-
-
+  let $searchResultContainer = $('.js-search-result');
 
   /**Initialize map
    * @param map {string} ID of HTMLElement where map will displaying
@@ -35,6 +34,7 @@ $(document).ready(() => {
     gmap.setMarkers(data);
     accomodations.filterClear();
     accomodations.filter(data);
+    $searchResultContainer.removeClass('_disabled');
   });
 
   /** Clear filtering results
@@ -42,6 +42,12 @@ $(document).ready(() => {
   $(document).on('filter:clear', () => {
     gmap.setMarkers(apartmentsArray);
     accomodations.filterClear();
+  });
+
+  /** If not results display attention
+   * */
+  $(document).on('filter:no-result', () => {
+    $searchResultContainer.addClass('_disabled');
   });
 
   /** Enable nested scrolling only on large devices

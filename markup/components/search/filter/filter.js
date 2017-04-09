@@ -97,8 +97,11 @@ export default class AmentitiesFilter {
         }
     );
 
-    //If no results make clean and do nothing
-    if (!this.resultArray.length) this.flush();
+    //If no results bootstrap event
+    if (!this.resultArray.length) {
+      $(document).trigger('filter:no-result');
+      return;
+    }
 
     //Trigger custom event which reports on successful filtering
     $(document).trigger('filter:amentities', [this.resultArray]);
