@@ -32,6 +32,29 @@ $border-radius: 10px;
   @media (max-width: 380px) {
     min-height: 250px;
   }
+  &._filter-hidden {
+    display: none;
+    //animation: slide 1s 1 ease forwards;
+  }
+
+  &._filter-visible {
+    display: block;
+    //transition: all 400ms ease;
+  }
+
+  @keyframes slide {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      position: absolute;
+      opacity: 0;
+      display: none;
+    }
+  }
+
+
+
   &__caption {
     display: flex;
     flex-direction: column;

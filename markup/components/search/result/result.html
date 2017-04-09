@@ -2,28 +2,26 @@
     <div class="search-result__tab-wrap" role="tablist">
 
         <ul class="search-result__tab">
-            <li class="search-result__tab-item active" data-toggle="tab" data-target="#gmap" role="tab">Map</li>
-            <li class="search-result__tab-item" data-toggle="tab" data-target="#apartment" role="tab">
+            <li class="search-result__tab-item  active" data-toggle="tab" data-target="#gmap" role="tab">Map</li>
+            <li class="search-result__tab-item " data-toggle="tab" data-target="#apartment" role="tab">
                 Accommodations
             </li>
         </ul>
 
     </div>
     <div class="search-result__info">
-        <div class="search-result__filters">
-            {{> search/filter/tags }}
-        </div>
+        <div class="search-result__filters js-search-filters"></div>
         <div class="search-result__number">6 offers</div>
     </div>
 </div>
 <div class="search-result__body">
 
-    <div class="search-result__tab-body fade active in" id="gmap" role="tabpanel">{{>search/result/map/map}}</div>
+    <div class="search-result__tab-body fade active in " id="gmap" role="tabpanel">{{>search/result/map/map}}</div>
     <div class="search-result__tab-body fade" id="apartment" role="tabpanel">
         <div class="js-scroll scroll-wrap">
-            <section class="apartment-wrap">
+            <section class="apartment-wrap js-apartments-container">
                 {{#each this}}
-                <a href="/" class="apartment" style="background-image:url('%=static=%img/assets/search/result/{{this.image}}') ">
+                <a href="/" data-apartment-id="{{this.id}}" class="apartment js-apartment" style="background-image:url('%=static=%img/assets/search/result/{{this.image}}') ">
                     <span class="apartment__caption">
                         <span class="apartment__title">
                             <span class="apartment__name">{{this.name}}</span>

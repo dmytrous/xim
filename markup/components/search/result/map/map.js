@@ -47,10 +47,12 @@ export default class GMap {
         //Init map
         this.map = new googleMap.Map(document.getElementById(el), this.options);
         resolve(this.map);
+
       }).catch((err) => {
         reject(err);
       });
     });
+
   }
 
   /**@method Show markers on map
@@ -62,7 +64,7 @@ export default class GMap {
     //Async load RichMarker dependency
     require('static/js/plugins/gmap/richmarker');
 
-    //Before make map clear
+    //Before, make clear
     if (this.markersArray.length) {
       this.clearMarkers();
     }
@@ -99,7 +101,9 @@ export default class GMap {
    * @name clearMarkers
    * */
   clearMarkers() {
-    if (!this.markersArray.length) { return; }
+    if (!this.markersArray.length) {
+      return;
+    }
 
     for (let i = 0; i < this.markersArray.length; i++) {
       this.markersArray[i].setMap(null);

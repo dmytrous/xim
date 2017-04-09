@@ -64,12 +64,14 @@
   &__filters,
   &__number {
     display: flex;
-    justify-content: center;
     align-items: center;
   }
   &__filters {
+    flex-wrap: wrap;
+    padding: 5px 0;
   }
   &__number {
+    flex-shrink: 0;
     font-size: 13px;
     font-weight: 600;
     padding-left: 20px;
@@ -90,7 +92,5 @@
     }
   }
 }
-
-@import './apartment/apartment';
 
 //TODO: fix Safari 9+ issues

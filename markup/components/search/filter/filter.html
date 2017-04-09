@@ -8,15 +8,13 @@
             </button>
         </div>
         <div class="filter__content collapse in" id="amentities">
-            <form action="" class="form filter-form">
+            <form action="" class="form filter-form js-amentities-form">
                 <div class="form__group _search">
                     <label for="search" class="form__label">Amentities search</label>
                     <div class="filter-form__search-wrap">
                         <input type="text" class="form-control filter-form__input-search" name="search" id="search"
                                placeholder="enter the names of amenities that you need in apartment">
-                        <div class="filter-form__search-tags  js-search-filters">
-                            {{> search/filter/tags }}
-                        </div>
+                        <div class="filter-form__search-tags  js-search-filters"></div>
                     </div>
                 </div>
                 <!--Filter section-->
@@ -34,7 +32,7 @@
                             <div class="filter-form__chkbx-group">
                                 {{#each this.popular}}
                                 <div class="form-chkbx filter-form__chkbx">
-                                    <input type="checkbox" id="popular-chkbx{{@index}}" class="form-chkbx-input">
+                                    <input type="checkbox" value="{{this}}" id="popular-chkbx{{@index}}" class="form-chkbx-input js-amentities-filter">
                                     <label for="popular-chkbx{{@index}}" class="form-chkbx-label">{{this}}</label>
                                 </div>
                                 {{/each}}
@@ -49,7 +47,7 @@
                         <div class="filter-form__chkbx-group">
                             {{#each this.apartment}}
                             <div class="form-chkbx filter-form__chkbx">
-                                <input type="checkbox" id="apartment-chkbx{{@index}}" class="form-chkbx-input">
+                                <input type="checkbox" value="{{this}}" id="apartment-chkbx{{@index}}" class="form-chkbx-input js-amentities-filter">
                                 <label for="apartment-chkbx{{@index}}" class="form-chkbx-label">{{this}}</label>
                             </div>
                             {{/each}}
@@ -72,7 +70,7 @@
                             <div class="filter-form__chkbx-group">
                                 {{#each this.kitchen}}
                                 <div class="form-chkbx filter-form__chkbx">
-                                    <input type="checkbox" id="kitchen-chkbx{{@index}}" class="form-chkbx-input">
+                                    <input type="checkbox" value="{{this}}" id="kitchen-chkbx{{@index}}" class="form-chkbx-input js-amentities-filter">
                                     <label for="kitchen-chkbx{{@index}}" class="form-chkbx-label">{{this}}</label>
                                 </div>
                                 {{/each}}
