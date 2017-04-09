@@ -127,5 +127,3 @@ export default class GMap {
     this.markerCluster.fitMapToMarkers();
   }
 }
-
-//  TODO: fix google maps styles

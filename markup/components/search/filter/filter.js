@@ -61,8 +61,8 @@ export default class AmentitiesFilter {
    * @param filter {string} name of filter criteria
    * */
   addFilterTag(filter) {
-    let $filterTag = `<span class="filter-tag js-filter-tag"  data-filter="${filter}">${filter}<button type="button" class="btn filter-tag__close js-filter-tag-close"></button></span>`;
-    this.$filterTags.append($filterTag);
+    let $filterTag = `<span class="filter-tag js-filter-tag" data-filter="${filter}">${filter}<button type="button" class="btn filter-tag__close js-filter-tag-close"></button></span>`;
+    this.$filterTags.append($filterTag).fadeIn();
   };
 
   /**@method Add selected filter tag to tag panel
@@ -70,7 +70,7 @@ export default class AmentitiesFilter {
    * @param filter {string} name of filter criteria
    * */
   removeFilterTag(filter) {
-    this.$filterTags.find(`[data-filter="${filter}"]`).remove();
+    this.$filterTags.find(`[data-filter="${filter}"]`).fadeOut().remove();
     this.uncheck(filter);
   }
 
@@ -114,5 +114,3 @@ export default class AmentitiesFilter {
   }
 
 }
-
-//TODO: Think abount no results
