@@ -15,15 +15,12 @@ $(document).ready(() => {
     zoom: 8,
   };
 
-  /**Load map styles data json
-   * @param url {string}
-   * */
-  $.getJSON('./data/map.json', { async: false }, (data) => {
-    mapOptions.styles = data;
-  }).fail((err) => {
-    console.log(err);
-  });
 
+
+  /**Initialize map
+   * @param map {string} ID of HTMLElement where map will displaying
+   * @param mapOptions {Object} Google Map options
+   * */
   gmap.init('gmap', mapOptions).then((data) => {
     $.getJSON('./data/apartments.json', (data) => {
       apartmentsArray = data;
@@ -32,12 +29,16 @@ $(document).ready(() => {
     });
   });
 
+  /** Displaying filtering results
+   * */
   $(document).on('filter:amentities', (event, data) => {
     gmap.setMarkers(data);
     accomodations.filterClear();
     accomodations.filter(data);
   });
 
+  /** Clear filtering results
+   * */
   $(document).on('filter:clear', () => {
     gmap.setMarkers(apartmentsArray);
     accomodations.filterClear();

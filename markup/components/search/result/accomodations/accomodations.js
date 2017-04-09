@@ -12,12 +12,14 @@ export default class Accomodations {
   //Show apartments only by filter match
   filter(accommodations) {
 
+    //First found elements which match
     for (let key in accommodations) {
       $(`.js-apartment[data-apartment-id="${accommodations[key].id}"]`)
           .removeClass('_filter-hidden')
           .toggleClass('_filter-visible');
     }
 
+    //Second hide another elements
     this.$accomodations.map((idx, el) => {
       if (!$(el).hasClass('_filter-visible')) {
         $(el).addClass('_filter-hidden');

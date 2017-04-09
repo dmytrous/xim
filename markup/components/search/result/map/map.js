@@ -40,6 +40,12 @@ export default class GMap {
 
       this.options = options || {};
 
+      /**Load map styles data json
+       * @param url {string}
+       * */
+      $.getJSON('./data/map.json', { async: false }, (data) => {options.styles = data;})
+          .fail((err) => {console.log(err);});
+
       //Load Google Map and init with options
       loadGoogleMapsAPI(this.loadOptions).then((googleMap) => {
         this.googleMap = googleMap;
