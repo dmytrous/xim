@@ -81,9 +81,9 @@
   }
   &__tab-body {
     padding: 0 0 10px;
-    display: none;
+    visibility: hidden;
     &.active {
-      display: block;
+      visibility: visible;
       width: 100%;
     }
     @media (max-width: 1024px) {

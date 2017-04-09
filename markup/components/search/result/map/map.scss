@@ -1,7 +1,15 @@
 #gmap {
-  position: relative;
+  position: absolute;
+  display: flex;
+  flex: 1 0 auto;
+  left: 0;
+  top: 0;
+  width: 100%;
   height: 100%;
+}
 
+.active#gmap {
+  position: relative;
 }
 
 .gmap-marker {

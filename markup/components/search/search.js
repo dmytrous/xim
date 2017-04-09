@@ -11,6 +11,7 @@ $(document).ready(() => {
   let accomodations = new Accomodations();
   let filtration;
   let mapOptions = {
+    center: { lat: 41.393592, lng: 2.162570 },
     zoom: 8,
   };
 
@@ -33,6 +34,7 @@ $(document).ready(() => {
 
   $(document).on('filter:amentities', (event, data) => {
     gmap.setMarkers(data);
+    accomodations.filterClear();
     accomodations.filter(data);
   });
 
