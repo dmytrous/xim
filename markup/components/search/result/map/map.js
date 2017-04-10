@@ -20,7 +20,7 @@ export default class GMap {
         height: 51,
         textColor: 'white',
         textSize: 12,
-      }]
+      }],
     };
   }
 

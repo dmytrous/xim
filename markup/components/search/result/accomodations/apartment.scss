@@ -35,6 +35,7 @@ $border-radius: 10px;
   &._filter-hidden {
 
     animation: fadeOutApartment 1s 1 ease forwards;
+
   }
 
   &,
@@ -48,6 +49,8 @@ $border-radius: 10px;
     }
     100% {
       position: absolute;
+      left: 0;
+      top: 0;
       opacity: 0;
       display: none;
     }
@@ -64,7 +67,12 @@ $border-radius: 10px;
     }
   }
 
-
+  //For IE
+  @supports (-ms-ime-align:auto) {
+    &._filter-hidden {
+      display: none;
+    }
+  }
 
   &__caption {
     display: flex;
@@ -104,3 +112,5 @@ $border-radius: 10px;
     font-size: 14px;
   }
 }
+
+//TODO: Fix Explorer animation forwards issues
