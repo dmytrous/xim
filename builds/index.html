@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css">
+
+
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    </head>
+
+    <body class="page">
+
+        <div class="main-layout">
+            <header class="header">
+                <a href="/" class="header__logo"></a>
+                <div class="header__controls">
+                    <a href="javascript:void(0)" class="btn btn-orange">List your property</a>
+                </div>
+            </header>
+            <div class="search">
+                <div class="search-filter">
+                    <div class="scroll-wrap js-scroll">
+                        <!--Search filters-->
+                        <div class="filter-section">
+                            <div class="filter">
+                                <div class="filter__label">
+                                    <button class="btn btn-collapse" data-toggle="collapse" data-target="#amentities">
+                                        <span class="btn-collapse__icon"></span>
+                                        <span class="btn-collapse__txt">Amentities</span>
+                                    </button>
+                                </div>
+                                <div class="filter__content collapse in" id="amentities">
+                                    <form action="" class="form filter-form js-amentities-form">
+                                        <div class="form__group _search">
+                                            <label for="search" class="form__label">Amentities search</label>
+                                            <div class="filter-form__search-wrap">
+                                                <input type="text" class="form-control filter-form__input-search" name="search" id="search" placeholder="enter the names of amenities that you need in apartment">
+                                                <div class="filter-form__search-tags  js-search-filters"></div>
+                                            </div>
+                                        </div>
+                                        <!--Filter section-->
+                                        <div class="form__section">
+                                            <div class="form__section-header">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#popular-filter">
+                                                    <span class="btn-collapse__icon"></span>
+                                                    <span class="btn-collapse__txt">Popular Amentities</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="form__section-body">
+                                                <div class="filter-form__collapse collapse" id="popular-filter">
+                                                    <div class="filter-form__chkbx-group">
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Air conditioner" id="popular-chkbx0" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx0" class="form-chkbx-label">Air conditioner</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Computer" id="popular-chkbx1" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx1" class="form-chkbx-label">Computer</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Elevator" id="popular-chkbx2" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx2" class="form-chkbx-label">Elevator</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Free Transportation" id="popular-chkbx3" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx3" class="form-chkbx-label">Free Transportation</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Free wireless internet" id="popular-chkbx4" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx4" class="form-chkbx-label">Free wireless internet</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Guarded parking" id="popular-chkbx5" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx5" class="form-chkbx-label">Guarded parking</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Hair dryer" id="popular-chkbx6" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx6" class="form-chkbx-label">Hair dryer</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Washing machine" id="popular-chkbx7" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx7" class="form-chkbx-label">Washing machine</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Vacuum cleaner" id="popular-chkbx8" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx8" class="form-chkbx-label">Vacuum cleaner</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Wireless internet" id="popular-chkbx9" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx9" class="form-chkbx-label">Wireless internet</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Free wireless internet" id="popular-chkbx10" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx10" class="form-chkbx-label">Free wireless internet</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="TV (local channels only)" id="popular-chkbx11" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="popular-chkbx11" class="form-chkbx-label">TV (local channels only)</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Filter section-->
+                                        <div class="form__section">
+                                            <div class="form__section-header">Apartment</div>
+                                            <div class="form__section-body">
+                                                <div class="filter-form__chkbx-group">
+                                                    <div class="form-chkbx filter-form__chkbx">
+                                                        <input type="checkbox" value="Balcony" id="apartment-chkbx0" class="form-chkbx-input js-amentities-filter">
+                                                        <label for="apartment-chkbx0" class="form-chkbx-label">Balcony</label>
+                                                    </div>
+                                                    <div class="form-chkbx filter-form__chkbx">
+                                                        <input type="checkbox" value="Fireplace" id="apartment-chkbx1" class="form-chkbx-input js-amentities-filter">
+                                                        <label for="apartment-chkbx1" class="form-chkbx-label">Fireplace</label>
+                                                    </div>
+                                                    <div class="form-chkbx filter-form__chkbx">
+                                                        <input type="checkbox" value="Floor heating" id="apartment-chkbx2" class="form-chkbx-input js-amentities-filter">
+                                                        <label for="apartment-chkbx2" class="form-chkbx-label">Floor heating</label>
+                                                    </div>
+                                                    <div class="form-chkbx filter-form__chkbx">
+                                                        <input type="checkbox" value="Game room" id="apartment-chkbx3" class="form-chkbx-input js-amentities-filter">
+                                                        <label for="apartment-chkbx3" class="form-chkbx-label">Game room</label>
+                                                    </div>
+                                                    <div class="form-chkbx filter-form__chkbx">
+                                                        <input type="checkbox" value="Terrace" id="apartment-chkbx4" class="form-chkbx-input js-amentities-filter">
+                                                        <label for="apartment-chkbx4" class="form-chkbx-label">Terrace</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Filter section-->
+                                        <div class="form__section">
+                                            <div class="form__section-header">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#kitchen-filter">
+                                                    <span class="btn-collapse__icon"></span>
+                                                    <span class="btn-collapse__txt">Kitchen</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="form__section-body">
+                                                <div class="filter-form__collapse collapse" id="kitchen-filter">
+                                                    <div class="filter-form__chkbx-group">
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Blender" id="kitchen-chkbx0" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx0" class="form-chkbx-label">Blender</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Coffee maker" id="kitchen-chkbx1" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx1" class="form-chkbx-label">Coffee maker</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Cooking hob" id="kitchen-chkbx2" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx2" class="form-chkbx-label">Cooking hob</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Dishwasher" id="kitchen-chkbx3" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx3" class="form-chkbx-label">Dishwasher</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Freezer" id="kitchen-chkbx4" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx4" class="form-chkbx-label">Freezer</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Fridge" id="kitchen-chkbx5" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx5" class="form-chkbx-label">Fridge</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Blender" id="kitchen-chkbx6" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx6" class="form-chkbx-label">Blender</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Coffee maker" id="kitchen-chkbx7" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx7" class="form-chkbx-label">Coffee maker</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Cooking hob" id="kitchen-chkbx8" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx8" class="form-chkbx-label">Cooking hob</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Dishwasher" id="kitchen-chkbx9" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx9" class="form-chkbx-label">Dishwasher</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Freezer" id="kitchen-chkbx10" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx10" class="form-chkbx-label">Freezer</label>
+                                                        </div>
+                                                        <div class="form-chkbx filter-form__chkbx">
+                                                            <input type="checkbox" value="Fridge" id="kitchen-chkbx11" class="form-chkbx-input js-amentities-filter">
+                                                            <label for="kitchen-chkbx11" class="form-chkbx-label">Fridge</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result js-search-result">
+                    <div class="search-result__header">
+                        <div class="search-result__tab-wrap" role="tablist">
+
+                            <ul class="search-result__tab">
+                                <li class="search-result__tab-item" data-toggle="tab" data-target="#gmap" role="tab">Map</li>
+                                <li class="search-result__tab-item active" data-toggle="tab" data-target="#apartment" role="tab">
+                                    Accommodations
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="search-result__info">
+                            <div class="search-result__filters js-search-filters"></div>
+                            <div class="search-result__number">6 offers</div>
+                        </div>
+                    </div>
+                    <div class="search-result__body">
+
+                        <div class="search-result__tab-body fade" id="gmap" role="tabpanel">
+                            <div id="gmap"></div>
+                        </div>
+                        <div class="search-result__tab-body active in" id="apartment" role="tabpanel">
+                            <div class="js-scroll scroll-wrap">
+                                <section class="apartment-wrap js-apartments-container">
+                                    <a href="/" data-apartment-id="1" class="apartment js-apartment" style="background-image:url('assets/img/assets/search/result/a1.jpg') ">
+                                        <span class="apartment__caption">
+                                                    <span class="apartment__title">
+                                                        <span class="apartment__name">Stylish apartment in el born</span>
+                                        <span class="apartment__price"><sup class="apartment__currency">‌€</sup>85</span>
+                                        </span>
+                                        </span>
+                                    </a>
+                                    <a href="/" data-apartment-id="2" class="apartment js-apartment" style="background-image:url('assets/img/assets/search/result/a2.jpg') ">
+                                        <span class="apartment__caption">
+                                                    <span class="apartment__title">
+                                                        <span class="apartment__name">A cozy flat near Las Ramblas</span>
+                                        <span class="apartment__price"><sup class="apartment__currency">‌€</sup>70</span>
+                                        </span>
+                                        </span>
+                                    </a>
+                                    <a href="/" data-apartment-id="3" class="apartment js-apartment" style="background-image:url('assets/img/assets/search/result/a3.jpg') ">
+                                        <span class="apartment__caption">
+                                                    <span class="apartment__title">
+                                                        <span class="apartment__name">Apartment in the classic Barcelona center</span>
+                                        <span class="apartment__price"><sup class="apartment__currency">‌€</sup>60</span>
+                                        </span>
+                                        </span>
+                                    </a>
+                                    <a href="/" data-apartment-id="4" class="apartment js-apartment" style="background-image:url('assets/img/assets/search/result/a4.jpg') ">
+                                        <span class="apartment__caption">
+                                                    <span class="apartment__title">
+                                                        <span class="apartment__name">Classic Eixample place for rent</span>
+                                        <span class="apartment__price"><sup class="apartment__currency">‌€</sup>75</span>
+                                        </span>
+                                        </span>
+                                    </a>
+                                    <a href="/" data-apartment-id="5" class="apartment js-apartment" style="background-image:url('assets/img/assets/search/result/a5.jpg') ">
+                                        <span class="apartment__caption">
+                                                    <span class="apartment__title">
+                                                        <span class="apartment__name">Atlantida Beach</span>
+                                        <span class="apartment__price"><sup class="apartment__currency">‌€</sup>90</span>
+                                        </span>
+                                        </span>
+                                    </a>
+                                    <a href="/" data-apartment-id="6" class="apartment js-apartment" style="background-image:url('assets/img/assets/search/result/a6.jpg') ">
+                                        <span class="apartment__caption">
+                                                    <span class="apartment__title">
+                                                        <span class="apartment__name">Elegant place in Eixample</span>
+                                        <span class="apartment__price"><sup class="apartment__currency">‌€</sup>150</span>
+                                        </span>
+                                        </span>
+                                    </a>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/js/main.min.js"></script>
+
+    </body>
+
+</html>
